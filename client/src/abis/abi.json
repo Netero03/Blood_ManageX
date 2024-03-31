@@ -1,0 +1,1054 @@
+[
+    {
+      "type": "constructor",
+      "name": "",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_name",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_symbol",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "Approval",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "owner",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "spender",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "value",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BloodTransfer",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "newOwner",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "type": "uint256",
+          "name": "verified",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "status",
+          "indexed": false,
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BloodUnitCreate",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "curr_owner",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "curr_owner_add",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "type": "uint256",
+          "name": "verified",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "ContractURIUpdated",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "prevURI",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "newURI",
+          "indexed": false,
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "OwnerUpdated",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "prevOwner",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "newOwner",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Transfer",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "from",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "to",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "value",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "anonymous": false
+    },
+    {
+      "type": "function",
+      "name": "BloodStore",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "uniqueid",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "aadhar",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "blood_group",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "expiry_date",
+          "internalType": "string"
+        },
+        {
+          "type": "uint256",
+          "name": "statusCount",
+          "internalType": "uint256"
+        },
+        {
+          "type": "bool",
+          "name": "exists",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "DOMAIN_SEPARATOR",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "bytes32",
+          "name": "",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "UserStore",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "user_address",
+          "internalType": "address payable"
+        },
+        {
+          "type": "string",
+          "name": "email",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "password",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "name",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "addressUser",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "coords",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "typeID",
+          "internalType": "string"
+        },
+        {
+          "type": "bool",
+          "name": "exists",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "addBloodUnit",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_uniqueid",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_aadhar",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_blood_group",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_expiry_date",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_cur_owner",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_cur_owner_address",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "addIdentity",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_name",
+          "internalType": "string"
+        },
+        {
+          "type": "address",
+          "name": "user_address",
+          "internalType": "address payable"
+        },
+        {
+          "type": "string",
+          "name": "_email",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_password",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_address",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_coords",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_typeID",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "allowance",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "owner",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "spender",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "approve",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "spender",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "amount",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "balanceOf",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "account",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "bloodCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "bloodExist",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_id",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "burn",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_amount",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "contractURI",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "decimals",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint8",
+          "name": "",
+          "internalType": "uint8"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "decreaseAllowance",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "spender",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "subtractedValue",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "getBloodCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBloodData",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBloodStatus",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "_status_count",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getBloodStatusCount",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getIdentity",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "user_address",
+          "internalType": "address payable"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getLoginDetails",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_user_add",
+          "internalType": "address payable"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getUserCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "idToBloodId",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "increaseAllowance",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "spender",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "addedValue",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "isloginValid",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_user_add",
+          "internalType": "address payable"
+        },
+        {
+          "type": "string",
+          "name": "_email",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_password",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "mintTo",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_to",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "_amount",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "multicall",
+      "inputs": [
+        {
+          "type": "bytes[]",
+          "name": "data",
+          "internalType": "bytes[]"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bytes[]",
+          "name": "results",
+          "internalType": "bytes[]"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "name",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "nonces",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "owner",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "permit",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "owner",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "spender",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "value",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint256",
+          "name": "deadline",
+          "internalType": "uint256"
+        },
+        {
+          "type": "uint8",
+          "name": "v",
+          "internalType": "uint8"
+        },
+        {
+          "type": "bytes32",
+          "name": "r",
+          "internalType": "bytes32"
+        },
+        {
+          "type": "bytes32",
+          "name": "s",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "setContractURI",
+      "inputs": [
+        {
+          "type": "string",
+          "name": "_uri",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "setOwner",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_newOwner",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "symbol",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "string",
+          "name": "",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "totalSupply",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "transfer",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "to",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "amount",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "transferAsset",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id",
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "_oldUser",
+          "internalType": "string"
+        },
+        {
+          "type": "uint256",
+          "name": "verified",
+          "internalType": "uint256"
+        },
+        {
+          "type": "string",
+          "name": "_status",
+          "internalType": "string"
+        },
+        {
+          "type": "string",
+          "name": "_newUser",
+          "internalType": "string"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "transferFrom",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "from",
+          "internalType": "address"
+        },
+        {
+          "type": "address",
+          "name": "to",
+          "internalType": "address"
+        },
+        {
+          "type": "uint256",
+          "name": "amount",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": "",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "userCount",
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    }
+  ]
